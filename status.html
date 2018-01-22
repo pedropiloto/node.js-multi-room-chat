@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Log</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans Condensed:300italic,300,700" rel="stylesheet"
+          type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/status.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <form enctype="multipart/form-data" id="uploadForm">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <!-- image-preview-filename input [CUT FROM HERE]-->
+
+                    <div class="input-group image-preview">
+                        <input type="text" class="form-control image-preview-filename" name="file" disabled="disabled">
+                        <!-- don't give a name === doesn't send on POST/GET -->
+                        <span class="input-group-btn">
+                    <!-- image-preview-clear button -->
+                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                        <span class="glyphicon glyphicon-remove"></span> Clear
+                    </button>
+                            <!-- image-preview-input -->
+                    <div class="btn btn-default image-preview-input">
+                        <span class="glyphicon glyphicon-folder-open"></span>
+                        <span class="image-preview-input-title">Browse</span>
+                        <input type="file" id="file_input" name="input-file-preview"/>
+                        <!-- rename it -->
+                    </div>
+
+                        <img src="img/loader.gif" id="load_image" width="20px;" height="20px;" style="margin-left:20%; display: none;"/>
+                </span>
+                    </div><!-- /input-group image-preview [TO HERE]-->
+                </div>
+            </div>
+            </div>
+        </div>
+    <div class="alert alert-danger alert-dismissable" id="wrong_file_alert" style="margin-top: 2%; display:none;">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Danger!</strong> Wrong File Type. Please contact support team
+    </div>
+        <div class="panel-body">
+            </br>
+            </br>
+            <div class="row">
+                <div class="col-lg-2 col-sm-6">
+                    <div class="circle-tile">
+                        <div class="circle-tile-content blue">
+                            <div class="circle-tile-description text-faded">
+                                Total
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                                <span id="total">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="circle-tile">
+                        <div class="circle-tile-content blue">
+                            <div class="circle-tile-description text-faded">
+                                Geral
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                                <span id="room_0">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="circle-tile">
+                        <div class="circle-tile-content blue">
+                            <div class="circle-tile-description text-faded">
+                                Palco NOS
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                                <span id="room_1">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="circle-tile">
+                        <div class="circle-tile-content blue">
+                            <div class="circle-tile-description text-faded">
+                                Palco SuperBock
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                                <span id="room_2">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="circle-tile">
+                        <div class="circle-tile-content blue">
+                            <div class="circle-tile-description text-faded">
+                                Palco .
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                                <span id="room_3">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="circle-tile">
+                        <div class="circle-tile-content blue">
+                            <div class="circle-tile-description text-faded">
+                                Palco PitchFork
+                            </div>
+                            <div class="circle-tile-number text-faded">
+                                <span id="room_4">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="js/sql.js"></script>
+<script src="js/status.js"></script>
+
+
+</body>
+
+</html>
