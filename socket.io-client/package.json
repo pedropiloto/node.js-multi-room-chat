@@ -67,7 +67,7 @@
     "mocha": "1.16.2",
     "socket.io": "1.2.1",
     "text-blob-builder": "0.0.1",
-    "uglify-js": "2.4.15",
+    "uglify-js": "3.8.0",
     "zuul": "1.10.2"
   },
   "homepage": "https://github.com/Automattic/socket.io-client#readme",
